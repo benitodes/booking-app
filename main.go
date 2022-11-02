@@ -29,8 +29,8 @@ func main() {
 		fmt.Printf("We have %v tickets left\n", remainingTickets)
 	}
 
-	userName = "Toma"
-	userTickets = 2
+	// userName = "Toma"
+	// userTickets = 2
 	fmt.Printf("User %v booked %v tickets\n", userName, userTickets)
 
 }
