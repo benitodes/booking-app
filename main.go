@@ -13,12 +13,16 @@ func main() {
 	fmt.Println("Get your tickets here to attend")
 
 	for {
-		var userName string
+		var firstName string
+		var lastName string
 		var userTickets uint
 
 		// ask user for their name
-		fmt.Println("Please enter your name")
-		fmt.Scan(&userName)
+		fmt.Println("Please enter your first name")
+		fmt.Scan(&firstName)
+
+		fmt.Println("Please enter your last name")
+		fmt.Scan(&lastName)
 
 		// ask user for number of tickets
 		fmt.Println("Please enter number of tickets")
@@ -26,9 +30,9 @@ func main() {
 
 		// update remaining tickets
 		remainingTickets -= userTickets
-		bookings = append(bookings, userName)
+		bookings = append(bookings, firstName+" "+lastName)
 
-		fmt.Printf("Thank you %v for booking %v tickets\n", userName, userTickets)
+		fmt.Printf("Thank you %v for booking %v tickets\n", firstName, userTickets)
 		fmt.Printf("We have %v tickets left\n", remainingTickets)
 		fmt.Printf("Bookings so far: %v \n", bookings)
 	}
